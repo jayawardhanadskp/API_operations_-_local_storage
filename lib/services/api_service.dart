@@ -222,9 +222,9 @@ class ApiService {
     final hiveService = HiveService();
     String? token = await hiveService.readData();
 
-    if (token == null) {
-      throw Exception('Token not found');
-    }
+    // if (token == null) {
+    //   throw Exception('Token not found');
+    // }
 
     final response = await http.get(url, headers: <String, String>{
       'Content-Type': 'application/json',
